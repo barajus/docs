@@ -5,6 +5,8 @@
 *.exe
 *.o
 *.so
+*.pdf
+*.xls
 
 # Packages #
 ############
@@ -45,3 +47,7 @@ hugo
 # VSCode Related # 
 ##################
 .vscode/*
+
+# Common Python Venv # 
+######################
+venv/*

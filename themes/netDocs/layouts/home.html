@@ -78,8 +78,14 @@
             <h3>Cumulus Linux</h3>
             <p class="small">An open network operating system designed for efficiency, automation and scale</p>
             <ul>
-              <li><a href="/cumulus-linux/">User guide</a></li>
-              <li><a href="/cumulus-linux/Quick-Start-Guide/">Quick start guide</a></li>
+              {{ if .Site.IsServer }} 
+                <li><a href="/cumulus-linux-41/">User guide</a></li>
+                <li><a href="/cumulus-linux-41/Quick-Start-Guide/">Quick start guide</a></li>
+              {{ else }} 
+                <li><a href="/cumulus-linux/">User guide</a></li>
+                <li><a href="/cumulus-linux/Quick-Start-Guide/">Quick start guide</a></li>
+              {{ end }} 
+              <!-- <li><a href="/pdfs/cumulus-linux.pdf">User guide (PDF)</a></li> -->
             </ul>
           </div>
           <div class="col-12 col-sm-6 col-lg-4 mb-5 mb-lg-0">
@@ -87,10 +93,17 @@
             <h3>Cumulus NetQ</h3>
             <p class="small">A highly-scalable, modern network operations tool set that provides visibility into your network</p>
             <ul>
-              <li><a href="/cumulus-netq/Cumulus-NetQ-Deployment-Guide/">Deployment guide</a></li>
-              <li><a href="/cumulus-netq/Cumulus-NetQ-Integration-Guide/">Integration guide</a></li>
-              <li><a href="/cumulus-netq/Cumulus-NetQ-UI-User-Guide/">GUI user guide</a></li>
-              <li><a href="/cumulus-netq/Cumulus-NetQ-CLI-User-Guide/">CLI user guide</a></li>
+              {{ if .Site.IsServer }}
+                <li><a href="/cumulus-netq-24/Cumulus-NetQ-Deployment-Guide/">Deployment guide</a></li>
+                <li><a href="/cumulus-netq-24/Cumulus-NetQ-Integration-Guide/">Integration guide</a></li>
+                <li><a href="/cumulus-netq-24/Cumulus-NetQ-UI-User-Guide/">GUI user guide</a></li>
+                <li><a href="/cumulus-netq-24/Cumulus-NetQ-CLI-User-Guide/">CLI user guide</a></li>
+              {{ else }} 
+                <li><a href="/cumulus-netq/Cumulus-NetQ-Deployment-Guide/">Deployment guide</a></li>
+                <li><a href="/cumulus-netq/Cumulus-NetQ-Integration-Guide/">Integration guide</a></li>
+                <li><a href="/cumulus-netq/Cumulus-NetQ-UI-User-Guide/">GUI user guide</a></li>
+                <li><a href="/cumulus-netq/Cumulus-NetQ-CLI-User-Guide/">CLI user guide</a></li>
+              {{ end }} 
             </ul>
           </div>
           <div class="col-12 col-sm-6 col-lg-4 mb-5 mb-lg-0">
@@ -171,11 +184,10 @@
               </ul>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4">
-              <h3>Chassis</h3>
+              <h3>Chassis<br />(Cumulus Linux 3.x only)</h3>
               <ul>
                 <li><a href="/chassis/">Overview</a></li>
                 <li><a href="/chassis/Chassis-Default-Configurations/">Default configurations</a></li>
-                <li><a href="/chassis/Chassis-specific-Commands/">Chassis-specific commands</a></li>
               </ul>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4">
@@ -200,8 +212,8 @@
             <div class="footer-content">
               <div class="mb-4">
                   <img id="rt-icon" src="https://static.cumulusnetworks.com/static/images/shared/cumulus-networks-rt-white-trademarked.ff839f1b2570.svg">
-                  <p>© <script type="text/javascript">document.write(new Date().getFullYear());</script> Cumulus Networks.<br>
-                  Site by <a href="//unomena.com/" target="_blank">Unomena</a>.</p>
+                  <p>© <script type="text/javascript">document.write(new Date().getFullYear());</script>&nbsp;Cumulus Networks.<br>
+                  Site by <a href="//unomena.com/" target="_blank">Unomena.</a></p>
                   <p><a href="/license/"><img src="/images/by-nc-sa.svg" alt="Cumulus Networks CC-by-NC-SA License"></a></p>
               </div>
               <ul class="mb-4">
